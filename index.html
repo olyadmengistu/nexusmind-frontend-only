@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusMind - Problem Solving Network</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            background-color: #F0F2F5;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #bcc0c4;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a5a9ad;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Custom animations for dropdown */
+        @keyframes animate-in {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes slide-in-from-top-2 {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes zoom-in-95 {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .animate-in {
+            animation: animate-in 0.2s ease-out;
+        }
+        
+        .slide-in-from-top-2 {
+            animation: slide-in-from-top-2 0.2s ease-out;
+        }
+        
+        .zoom-in-95 {
+            animation: zoom-in-95 0.2s ease-out;
+        }
+        
+        /* Dark mode styles */
+        .dark {
+            background-color: #18191a;
+            color: #e4e6eb;
+        }
+        
+        .dark .bg-white {
+            background-color: #242526 !important;
+        }
+        
+        .dark .text-gray-900 {
+            color: #e4e6eb !important;
+        }
+        
+        .dark .text-gray-700 {
+            color: #b0b3b8 !important;
+        }
+        
+        .dark .text-gray-600 {
+            color: #65676b !important;
+        }
+        
+        .dark .border-gray-200 {
+            border-color: #3e4042 !important;
+        }
+        
+        .dark .bg-gray-50 {
+            background-color: #3e4042 !important;
+        }
+        
+        .dark .bg-gray-100 {
+            background-color: #3e4042 !important;
+        }
+        
+        .dark .hover\:bg-gray-100:hover {
+            background-color: #3e4042 !important;
+        }
+        
+        .dark .hover\:bg-gray-50:hover {
+            background-color: #3e4042 !important;
+        }
+        
+        /* Video component animations */
+        @keyframes slide-up {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slide-up 0.3s ease-out;
+        }
+        
+        /* Heart animation for double-tap like */
+        @keyframes heart-burst {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+        
+        .heart-burst {
+            animation: heart-burst 1s ease-out;
+        }
+        
+        /* Video transition animations */
+        .video-transition-enter {
+            transform: translateY(100%);
+        }
+        
+        .video-transition-enter-active {
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .video-transition-exit {
+            transform: translateY(0);
+        }
+        
+        .video-transition-exit-active {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
